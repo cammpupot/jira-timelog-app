@@ -8,57 +8,42 @@ import { Button, Form , Col, Row, InputGroup, FormControl, ListGroup, ProgressBa
 const defaultCards =
   [
     {
-      "Jkey": "DBPB-80",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-80",
-      "Jsummary": "Sprint Meetings - Daily Standup",
-      "comment": "Atlas Daily Standup",
+      "Jkey": "DBPB-88",
+      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-88",
+      "Jsummary": "FLN: Sprint Meetings",
+      "comment": "Flintstones daily stand-up",
       "estimate": 15,
       "isRecurring": true
     },
     {
-      "Jkey": "DBPB-80",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-80",
-      "Jsummary": "Sprint Meetings - Iteration Planning",
-      "comment": "Atlas Iteration Planning",
-      "estimate": 15,
+      "Jkey": "DBPB-87",
+      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-87",
+      "Jsummary": "FLN: General Meetings",
+      "comment": "",
+      "estimate": 0,
       "isRecurring": true
     },
     {
-      "Jkey": "DBPB-80",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-80",
-      "Jsummary": "Sprint Meetings - Iteration Retro",
-      "comment": "Atlas Iteration Retro",
+      "Jkey": "DBPB-76",
+      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-76",
+      "Jsummary": "MGL: Sprint Meetings",
+      "comment": "Maglev daily stand-up",
       "estimate": 30,
       "isRecurring": true
     },
     {
-      "Jkey": "DBPB-80",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-80",
-      "Jsummary": "Sprint Meetings - Grooming",
-      "comment": "Atlas Grooming",
-      "estimate": 60,
+      "Jkey": "DBPB-75",
+      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-75",
+      "Jsummary": "MGL: General Meetings",
+      "comment": "",
+      "estimate": 0,
       "isRecurring": true
     },
     {
-      "Jkey": "DBPB-79",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-79",
-      "Jsummary": "General Meetings - FY 21",
+      "Jkey": "DBPB-43",
+      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-43",
+      "Jsummary": "PO Activities",
       "estimate": 30,
-      "isRecurring": true
-    },
-    {
-      "Jkey": "DBPB-96",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-96",
-      "Jsummary": "SoS meetings - FY 21",
-      "comment": "Scrum of Scrums meeting",
-      "estimate": 60,
-      "isRecurring": true
-    },
-    {
-      "Jkey": "DBPB-1795",
-      "Jurl": "https://jira.sandstone.com.au/browse/DBPB-1795",
-      "Jsummary": "Scrum Master Activities - FY 21",
-      "estimate": 60,
       "isRecurring": true
     }
   ];
@@ -79,7 +64,7 @@ function App() {
       <div>
         <Form onSubmit={handleSubmit}>
             <Form.Row>
-               <Form.Label column sm="3"><a href={props.Jurl} target="_blank" rel="noreferrer" class="text-light">{props.Jkey}-{props.Jsummary}</a></Form.Label>
+               <Form.Label column sm="3"><a href={props.Jurl} target="_blank" rel="noreferrer" class="text-light">[{props.Jkey}] {props.Jsummary}</a></Form.Label>
                <Col sm="2">
                 <InputGroup className="mb-2">
                   <FormControl id="timelog" type="number" defaultValue={props.estimate} required />
